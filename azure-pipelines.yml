@@ -1,15 +1,17 @@
-
 trigger:
 - main
 
 pool:
-  name: local-agnet  
+  name: local-agent  # Make sure this matches your self-hosted agent pool
 
 steps:
 - script: echo "Hello from Azure Pipeline!"
   displayName: "Greeting"
+  shell: cmd  # Ensuring the script runs in the Windows cmd shell
 
 - script: |
     echo "Checking content of index.html"
-    cat index.html
+    type index.html  # 'type' is the Windows equivalent of 'cat'
   displayName: "Show index.html content"
+  shell: cmd  # Ensuring the script runs in the Windows cmd shell
+
