@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: local-agent  # Make sure this matches your self-hosted agent pool
+  name: local-agnet  # Make sure this matches your self-hosted agent pool
 
 steps:
 - script: echo "Hello from Azure Pipeline!"
