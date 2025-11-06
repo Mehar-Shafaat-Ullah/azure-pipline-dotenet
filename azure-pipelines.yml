@@ -7,11 +7,11 @@ pool:
 steps:
 - script: echo "Hello from Azure Pipeline!"
   displayName: "Greeting"
-  shell: cmd  # Ensuring the script runs in the Windows cmd shell
+  #shell: cmd  # Ensuring the script runs in the Windows cmd shell
 
 - script: |
-    echo "Checking content of index.html"
-    type index.html  # 'type' is the Windows equivalent of 'cat'
+  echo "Checking content of index.html"
+  type index.html  # 'type' is the Windows equivalent of 'cat'
   displayName: "Show index.html content"
-  shell: cmd  # Ensuring the script runs in the Windows cmd shell
+ # shell: cmd   Ensuring the script runs in the Windows cmd shell
 
