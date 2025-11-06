@@ -3,7 +3,7 @@ trigger:
 - master
 
 pool:
-  vmImage: local-agent  
+  vmImage: local-agnet  
 
 steps:
 - script: echo "Hello from Azure Pipeline!"
