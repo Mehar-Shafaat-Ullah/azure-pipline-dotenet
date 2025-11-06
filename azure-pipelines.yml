@@ -10,11 +10,6 @@ steps:
   displayName: "Greeting"
 
 - script: |
-    echo "Listing project files..."
-    ls -l
-  displayName: "List files in workspace"
-
-- script: |
     echo "Checking content of index.html"
     cat index.html
   displayName: "Show index.html content"
