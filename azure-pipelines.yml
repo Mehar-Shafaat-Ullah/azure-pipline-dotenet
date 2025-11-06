@@ -9,6 +9,7 @@ pool:
 steps:
 - script: Write-Host "Hello from Azure Pipeline!"
   displayName: "Greeting (PowerShell)"
+  shell: pwsh
   # The 'Write-Host' command is the PowerShell equivalent of 'echo'
 
 - task: PowerShell@2 # A more explicit way to run PowerShell
