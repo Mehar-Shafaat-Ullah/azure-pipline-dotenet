@@ -2,21 +2,15 @@ trigger:
 - main
 
 pool:
-  name: local-agnet
-  # OR if using Microsoft-hosted agents:
-  # vmImage: 'windows-latest' 
+  name: local-agnet # Ensure this matches your self-hosted agent pool
 
 steps:
-- script: Write-Host "Hello from Azure Pipeline!"
-  displayName: "Greeting (PowerShell)"
-  shell: pwsh
-  # The 'Write-Host' command is the PowerShell equivalent of 'echo'
-
-- task: PowerShell@2 # A more explicit way to run PowerShell
-  inputs:
-    targetType: 'inline'
-    script: |
-      Write-Host "Checking content of index.html"
-      Get-Content index.html
-  displayName: "Show index.html content (PowerShell)"
-  # The 'Get-Content' cmdlet is the PowerShell equivalent of 'cat'/'type'
+- script: echo "Hello from Azure Pipeline!"
+  displayName: "Greeting (CMD)"
+  # No 'shell:' property needed; it defaults to cmd.exe on Windows.
+  
+- script: |
+    echo Checking content of index.html
+    type index.html
+  displayName: "Show index.html content (CMD)"
+  # 'type' is the native CMD command to display file contents.
