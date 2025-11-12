@@ -1,8 +1,8 @@
 trigger:
-- main
+- man
 
 pool:
-  name: local-agnet # Ensure this matches your self-hosted agent pool
+  name: local-agne # Ensure this matches your self-hosted agent pool
 
 steps:
 - script: echo "Hello from Azure Pipeline!"
@@ -10,7 +10,7 @@ steps:
   # No 'shell:' property needed; it defaults to cmd.exe on Windows.
   
 - script: |
-    echo Checking content of index.html
+    echo Checkingmm content of index.html
     type index.html
-  displayName: "Show index.html content (CMD)"
+  displayName: Show index.html content (CMD)"
   # 'type' is the native CMD command to display file contents.
